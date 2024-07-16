@@ -1,0 +1,100 @@
+{
+    "Locator": {
+        "coockiSelect1": {
+            "locator": "Manage options",
+            "option": {
+                "exact": true
+            }
+        },
+        "coockiSelect2": {
+            "locator": "button",
+            "option": {
+                "name": "Confirm choices"
+            }
+        },
+        "textHomepag": {
+            "locator":"heading", 
+            "option": {
+                "name": "Full-Fledged practice website"
+            }
+        },
+        "buttonSignUpLogin": {
+            "locator":"link",
+            "option": {
+                "name": " Signup / Login" 
+            }
+        },
+        "textNewUser": {
+            "locator":"heading",
+            "option": {
+                "name": "New User Signup!"
+            } 
+        },
+        "name": "Name",
+        "email": "#form > div > div > div:nth-child(3) > div > form > input[type=email]:nth-child(3)",
+        "button": {
+            "locator": "button", 
+            "option": {
+                "name": "Signup"
+            }
+        },
+        "textAccount": "Enter Account Information",
+        "civility": "#id_gender1",
+        "password": "Password *",
+        "dayBirth": "#days",
+        "monthBirth": "#months",
+        "yearBirth": "#years",
+        "newsLettre": "Sign up for our newsletter!",
+        "firstName": "First name *",
+        "lastName": "Last name *",
+        "streetAdress": "Address * (Street address, P.",
+        "country": "Country *",
+        "city": "City *",
+        "zip": "#zipcode",
+        "phone": "Mobile Number *",
+        "buttonCreat": {
+            "locator": "button",
+            "option": {
+                "name": "Create Account"
+            }                             
+        },
+        "stat": "State *",
+        "checkCreat": "Account Created!",
+        "buttonConti": {
+            "locator": "link",
+            "option": {
+                "name": "Continue"
+            }
+        },
+        "loggedIn": "Logged in as test",
+        "deletButton": {
+            "locator": "link",
+            "option": {
+                "name": " Delete Account"
+            }
+        },
+        "deletAccount": "Account Deleted!",
+        "checkPageLogin": {
+            "locator": "heading",
+            "option":{
+                "name": "Login to your account"
+            }
+        },
+        "emailLogin": "#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=email]:nth-child(2)",
+        "passwordLogin": "Password",
+        "buttonLogin":{
+            "locator": "button",
+            "option": {
+                "name": "Login"
+            }
+        },
+        "buttonLogout":{
+            "locator":"link",
+            "option": {
+                "name": " Logout"
+            } 
+        }
+    }, 
+    "messgeLoginIncorrect": "Your email or password is incorrect!",
+    "emailAdressExist":"Email Address already exist!" 
+}

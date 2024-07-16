@@ -1,0 +1,10 @@
+{
+    "buttonTestCase":{
+        "locator": "link",
+        "options": {
+            "name": " Test Cases"
+        }
+    },
+    "textWaitForSelector": "h2:has-text('Full-Fledged practice website')",
+    "urlTestCase": "/.*test_cases/"
+}

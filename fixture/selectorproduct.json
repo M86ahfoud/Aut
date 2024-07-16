@@ -1,0 +1,45 @@
+{
+    "productbutton": {
+        "locator": "link", 
+        "options": {
+            "name": " Products"
+        }
+    },
+    "allProducts": {
+        "locator": "heading",
+        "options": {
+            "name": "All Products" 
+        }
+    },
+    "textWaitForSelector": "h2:has-text('All Products')",
+    "products": ".col-sm-4",
+    "firstProduct": ".choose > .nav > li > a",
+    "nameProduct": {
+    "locator": "heading",
+        "options": {
+            "name": "Blue Top"
+        }
+        
+    } ,
+    "ProductCategory": "Category: Women > Tops",
+    "quantity": "#quantity",
+    "availability": "Availability: In Stock",
+    "condition": "Condition: New",
+    "brand": "Brand: Polo",
+    "productInformation": ".product-information",
+    "SearchProduct": "Search Product",
+    "searchButton": {
+     "locator": "button",
+     "options": {
+        "name": ""
+     }
+    },
+    "searchProductTitle": {
+        "locator": "heading",
+        "options": {
+            "name": "Searched Products"
+        }
+    },
+    "locatorResultProduct": ".productinfo > p"
+
+}

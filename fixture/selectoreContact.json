@@ -1,0 +1,43 @@
+{
+    "contactUsButton": {
+        "locator": "link",
+        "options": {
+            "name": " Contact us"
+        }
+    },
+    "getInTouche":{
+        "locator": "heading",
+        "options": {
+            "name": "Get In Touch"
+        }
+    },
+    "name": "Name",
+    "email": {
+        "locator": "Email",
+        "options": {
+            "exact": true
+        }
+    },
+    "subject": "Subject",
+    "message": "Your Message Here",
+    "filPathe": "../fixture/testFile.txt",
+    "uploadInput": "input[name='upload_file']",
+    "submitButton": {
+        "locatore": "button",
+        "options": {
+            "name": "Submit"
+        }
+        
+    }, 
+    "successMessage": {
+        "locatorsuccessmessage": "#contact-page",
+        "textSuccessMessage":"Success! Your details have"
+    },
+    "homePageButton": {
+        "locator": "link",
+        "options": {
+            "name": " Home"
+        }
+    }
+ 
+}

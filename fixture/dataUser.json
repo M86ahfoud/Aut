@@ -1,0 +1,28 @@
+{
+    "user": {
+        "name": "test7",
+        "email": "testLogicie20@yahoo.com",
+        "password": "test12004",
+        "dayBirth": "7",
+        "monthBirth": "3",
+        "yearBirth": "2003",
+        "firstName": "Amine",
+        "lastName": "Raphal",
+        "streetAdress": "12 rue de paris",
+        "country":"Singapore",
+        "city": "aghtoury",
+        "zipcode": "75020",
+        "phone": "003356897410",
+        "stat": "Kouala"      
+    }, 
+    
+    "correctDataUSer":{
+        "emailLogin": "testLogiciel6@yahoo.com",
+        "passwordLogin": "test12001"
+    },
+    "incorrectDataUser": {
+        "emailLogin": "testlogiciel5@yahoo.com",
+        "passwordLogin": "test1201"
+    },
+    "url":"https://automationexercise.com/"
+}

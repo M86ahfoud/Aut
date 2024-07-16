@@ -29,13 +29,19 @@ test.describe('test produt list', async () => {
         // Check the visibilité the detail of first product
         await productInstance.showDetailOfFirstProduct();
         await productInstance.detailVisibility();
+        // Check the default value of a quantity 
         await productInstance.vérifyQuantity();
     })
     test('search product', async() => {
+        // Navigate to the home page 
         await productInstance.goto();
+        // Verify that home page is visible successful
         await productInstance.checkHompage();
+        // Click on "Products button" and navigate to the product page
         await productInstance.navigateToProductPage();
+         // Entre the product name in search input and click search button 
         await productInstance.searchForProduct();
+        // Verify all products related to search are visible       
         await productInstance.verifyProductResult();
     })
 

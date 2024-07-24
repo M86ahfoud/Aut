@@ -57,6 +57,8 @@ exports.Register = class Register {
     }
     async goto() {
         await this.page.goto(dataUser.url)
+        // await this.page.pause();
+        // await this.page.waitForSelector('label:has-text("Manage options")')
         await this.coockiTextBox1.click();
         await this.coockiTextBox2.click();
     }

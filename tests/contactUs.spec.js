@@ -31,13 +31,15 @@ test.describe('contact US form', async() => {
     });
 
     test('Contact Us From', async () => {
-    
+    // Fill information in the form
         await contactUsInstance.fillContactForm(
             dataUser.user.name,
             dataUser.user.email,
             dataContactForm.subject,
             dataContactForm.message
         )
+
+        // Submit the form
         await contactUsInstance.submitForm();
         await contactUsInstance.checkSuccessMessage();
     

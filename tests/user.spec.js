@@ -73,12 +73,12 @@ test.describe('sign and login tests', ()=> {
         
     });
     test('Login with an incorrect mail and password', async() => {
-        // await registerInstance.navigateToLoginPage();
+       
         
         await loginInstance.login(dataUser.incorrectDataUser.emailLogin, 
                                 dataUser.incorrectDataUser.passwordLogin);
         await loginInstance.checkLogin()
-        // await page.pause();
+        
     });
 
     

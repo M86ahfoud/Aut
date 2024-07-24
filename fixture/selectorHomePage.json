@@ -1,0 +1,17 @@
+{
+    "subscruption": {
+        "locator": "heading",
+        "Options": {
+            "name": "Subscription"
+        }
+    },
+    "TextSubscription": "Subscription",
+    "emailAddress": "Your email address",
+    "button": {
+        "locator": "button",
+        "Options": {
+            "name": ""
+        }
+    },
+    "succesMessage": "You have been successfully"
+}

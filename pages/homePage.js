@@ -4,6 +4,7 @@ import dataUser from "../fixture/dataUser.json";
 import selectoreHomePage from "../fixture/selectorHomePage.json"
 import { faker } from "@faker-js/faker";
 
+
 exports.homePage = class homePage {
 
 constructor(page) {
@@ -20,7 +21,9 @@ constructor(page) {
     this.email = page.getByPlaceholder(selectoreHomePage.emailAddress),
     this.button = page.getByRole(selectoreHomePage.button.locator, 
                                 selectoreHomePage.button.Options),
-    this.succesMessage = page.getByText(selectoreHomePage.succesMessage)
+    this.succesMessage = page.getByText(selectoreHomePage.succesMessage),
+    this.buttonCard = page.getByRole(selectoreHomePage.buttonCard.locator,
+                                     selectoreHomePage.buttonCard.Options)
     
 }
 
@@ -37,7 +40,9 @@ async vérifyText() {
      await expect(this.subscription).toBeVisible();
 }
 async fillInput() {
+    await this.page.waitForSelector('input[placeholder="Your email address"]')
     await this.email.fill(faker.internet.email());
+    await expect(this.email).not.toBeEmpty()
     await this.button.click()
 
 }
@@ -49,5 +54,8 @@ async verifySuccesMessage() {
 
 }
 
+async buttonCardAcces(){
+    this.buttonCard.click()
+}
 
 }

@@ -13,5 +13,11 @@
             "name": ""
         }
     },
-    "succesMessage": "You have been successfully"
+    "succesMessage": "You have been successfully",
+    "buttonCard": {
+        "locator": "link",
+        "Options": {
+            "name": " Cart"
+        }
+    }
 }

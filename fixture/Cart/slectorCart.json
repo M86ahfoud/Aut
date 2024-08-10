@@ -1,0 +1,21 @@
+{
+    "pageTitle": "Automation Exercise",
+    "productLocator": ".product-image-wrapper",
+    "cartButtonLocator": ".overlay-content > .btn",
+    "viewCartBtLocator": {
+        "locator": "link",
+        "option": {
+            "name":"View Cart"
+        }
+    },
+    "addToCart":{
+        "locator": "button",
+        "option": {
+            "name": " Add to cart"
+        }
+    },
+    "cartProductLocator":".cart_product",
+    "buttonContinueShooping": "button:has-text('Continue Shopping')",
+    "quantity": "#quantity",
+    "fillQuantity": "4"
+}

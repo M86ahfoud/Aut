@@ -33,7 +33,7 @@ async goto() {
     await this.coockiTextBox2.click();
 }
 async checkHompage() {
-    await expect(this.page).toHaveTitle("Automation Exercise");
+    await expect(this.page).toHaveTitle(selectoreHomePage.pageTitle);
 }
 async vérifyText() {
      await this.textsubscru.scrollIntoViewIfNeeded()

@@ -6,6 +6,9 @@
         "locator": "link",
         "option": {
             "name":"View Cart"
+        },
+        "option2": {
+            "name": " Cart"
         }
     },
     "addToCart":{

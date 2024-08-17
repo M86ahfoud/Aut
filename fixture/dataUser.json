@@ -2,7 +2,6 @@
     "user": {
         "name": "test7",
         "email": "testLogicie21@yahoo.com",
-        "password": "test12005",
         "dayBirth": "7",
         "monthBirth": "3",
         "yearBirth": "2003",
@@ -18,7 +17,8 @@
     
     "correctDataUSer":{
         "emailLogin": "testLogiciel6@yahoo.com",
-        "passwordLogin": "test12001"
+        "passwordLogin": "test12001",
+        "namelogin": "test6"
     },
     "incorrectDataUser": {
         "emailLogin": "testlogiciel5@yahoo.com",

@@ -1,6 +1,7 @@
 import selectore from "../fixture/selectore.json";
 import { expect } from "@playwright/test";
-import dataUser from "../fixture/dataUser.json"
+import dataUser from "../fixture/dataUser.json";
+import { faker, Faker } from "@faker-js/faker";
 
 
 exports.Register = class Register {
@@ -68,20 +69,20 @@ exports.Register = class Register {
     async navigateToLoginPage() {
         await this.buttonSignUpLogin.click();
     }
-    async sign(name, email) {
+    async sign(name) {
         await expect(this.textNewUser).toBeVisible();
         await this.name.fill(name);
-        await this.email.fill(email);
+        await this.email.fill(faker.internet.email());
         await this.button.click();
     }
-    async create(
-        password, dayBirth, monthBirth, year, firstName,
+    async createAccount(
+         dayBirth, monthBirth, year, firstName,
         lastName, adress, country, stat, city, zipcode,
         phone, name
     ) {
         await expect(this.textAccount).toBeVisible();
         await this.checkButton.check();
-        await this.password.fill(password);
+        await this.password.fill(faker.internet.password());
         await this.dayBirth.selectOption(`${dayBirth}`);
         await this.month.selectOption(`${monthBirth}`);
         await this.yearBirth.selectOption(`${year}`);

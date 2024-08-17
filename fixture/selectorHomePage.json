@@ -1,4 +1,5 @@
 {
+    "pageTitle": "Automation Exercise",
     "subscruption": {
         "locator": "heading",
         "Options": {

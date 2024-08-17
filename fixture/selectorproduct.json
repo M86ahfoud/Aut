@@ -40,6 +40,7 @@
             "name": "Searched Products"
         }
     },
-    "locatorResultProduct": ".productinfo > p"
+    "locatorResultProduct": ".productinfo > p",
+    "itemProductLocator": ".features_items .product-image-wrapper"
 
 }

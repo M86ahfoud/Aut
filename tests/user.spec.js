@@ -36,10 +36,9 @@ test.describe('sign and login tests', ()=> {
     test('Register user', async () => {
         await registerInstance.sign(
             dataUser.user.name,
-            dataUser.user.email,
         );
-        await registerInstance.create(
-            dataUser.user.password,
+        await registerInstance.createAccount(
+            
             dataUser.user.dayBirth,
             dataUser.user.monthBirth,
             dataUser.user.yearBirth,
@@ -73,7 +72,6 @@ test.describe('sign and login tests', ()=> {
         
     });
     test('Login with an incorrect mail and password', async() => {
-       
         
         await loginInstance.login(dataUser.incorrectDataUser.emailLogin, 
                                 dataUser.incorrectDataUser.passwordLogin);

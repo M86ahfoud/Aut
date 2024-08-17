@@ -31,8 +31,8 @@ test.describe("Add Products in Cart", async()=> {
     await CartInstance.verifyPriceQuanTot();   
   });
 
-  test.only("Verify Product quantity  in cart", async()=> {
-    await CartInstance.viewProduct (); 
+  test("Verify Product quantity  in cart", async()=> {
+    await CartInstance.viewProduct(); 
     await CartInstance.verifyProductDétail();
     await CartInstance.IncreaseQuantity();
     await CartInstance.viewCartAndVerify()

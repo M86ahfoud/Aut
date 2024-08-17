@@ -2,7 +2,8 @@ import { expect } from "@playwright/test";
 import datauser from "../fixture/dataUser.json"
 import selectore  from "../fixture/selectore.json";
 import  selectorproduct from "../fixture/selectorproduct.json";
-import selectorCart from "../fixture/Cart/slectorCart.json"
+import selectorCart from "../fixture/Cart/slectorCart.json";
+import { faker, Faker } from "@faker-js/faker";
 exports.Cart = class Cart {
     constructor(page) {
         this.page = page; 
@@ -46,7 +47,7 @@ exports.Cart = class Cart {
     async addProduct2() {
         await this.product.nth(1).hover();
         await this.cartButton.nth(1).click();
-        ;
+        
     }
     async navigateToCartPage() {
         await this.viewCartBt.click();
@@ -58,30 +59,25 @@ exports.Cart = class Cart {
     }
      async verifyPriceQuanTot() {
         for (let i = 1; i <= 2; i++) {
-            const price = await this.page.locator(`#product-${i} .cart_price`).innerText();
-            const quantity = await this.page.locator(`#product-${i} .cart_quantity .disabled`).innerText();
-            const total = await this.page.locator(`#product-${i} .cart_total`).innerText();
+            const price = await this.page.locator(`tbody tr:nth-child(${i}) .cart_price`).innerText();
+            const quantity = await this.page.locator(`tbody tr:nth-child(${i}) .cart_quantity .disabled`).innerText();
+            const total = await this.page.locator(`tbody tr:nth-child(${i}) .cart_total`).innerText();
     
             // Print the details for verification
             console.log(`Product ${i} - Price: ${price}, Quantity: ${quantity}, Total: ${total}`);
     
             // Assertions
-            expect(parseFloat(price.replace(/[^\d.-]/g, ''))).toBeGreaterThan(0);
+            expect(parseFloat(price.replace(/[^\d-]/g, ''))).toBeGreaterThan(0);
             expect(parseInt(quantity, 10)).toBe(1);
-            expect(parseFloat(total.replace(/[^\d.-]/g, ''))).toBeGreaterThan(0);
+            expect(parseFloat(total.replace(/[^\d-]/g, ''))).toBeGreaterThan(0);
         }
      }
      async viewProduct () {
         const countProduct = this.page.locator(selectorCart.productLocator).count();
         const nbrProduct =  parseInt(await countProduct);  
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
-          }
-        this.randomDigit = getRandomInt(1, nbrProduct); 
-        await this.page.click(`a[href="/product_details/${this.randomDigit}"]`)
-        
+        console.log(nbrProduct);
+        this.randomDigit = faker.number.int({min:0, max:nbrProduct-1});
+        await this.page.locator(".choose a").nth(this.randomDigit).click();
      }
 
      async verifyProductDétail() {
@@ -95,7 +91,8 @@ exports.Cart = class Cart {
 
      async viewCartAndVerify() {
         await this.viewCartBt.click();
-        const quantityReceived = await this.page.locator(`#product-${this.randomDigit} .cart_quantity .disabled`).innerText(); 
+        
+        const quantityReceived = await this.page.locator("tbody tr .cart_quantity .disabled").innerText(); 
     
         expect(parseInt(quantityReceived)).toEqual(parseInt(selectorCart.fillQuantity)); 
      }

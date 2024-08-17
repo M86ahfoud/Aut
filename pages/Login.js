@@ -15,15 +15,18 @@ exports.Login = class Login {
             this.ButtonLogout = page.getByRole(selectore.Locator.buttonLogout.locator,
                 selectore.Locator.buttonLogout.option
             ),
-            this.messageLoginIncorrect = page.getByText(selectore.messgeLoginIncorrect)
+            this.messageLoginIncorrect = page.getByText(selectore.messgeLoginIncorrect);
+            this.logedIn = page.getByText(selectore.Locator.loggedIn);
     }
 
-    async login(email, password) {
+    async login(email, password, name) {
 
         await expect(this.checkPageLogin).toBeVisible();
         await this.emailLogin.fill(email);
         await this.passwordLogin.fill(password);
         await this.buttonLogin.click();
+        await expect(this.logedIn).toContainText(name);
+        await expect(this.logedIn).toBeVisible();
     }
     async logout() {
         await this.ButtonLogout.click();

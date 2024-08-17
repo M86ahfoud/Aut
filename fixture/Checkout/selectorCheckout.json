@@ -1,0 +1,22 @@
+{
+    "nameInput": "input[name='name_on_card']",
+    "card_numberInput": "input[name='card_number']",
+    "Code": "ex.",
+    "expirationDate": "MM",
+    "expirationYears": "YYYY",
+    "payementButton": {
+        "locator": "button",
+        "option":{
+            "name": "Pay and Confirm Order"
+        }
+    },
+    "proceedToCheckout":"Proceed To Checkout",
+    "registerBt": {
+        "locator": "link",
+        "option": {
+            "name": "Register / Login"
+        }
+    },
+    "infoProfuctLocator": ".product-image-wrapper .productinfo p"
+
+}

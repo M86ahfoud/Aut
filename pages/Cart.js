@@ -22,7 +22,10 @@ exports.Cart = class Cart {
         this.cartItems =  page.locator(selectorCart.cartProductLocator); 
         this.quantity =  page.locator(selectorCart.quantity);
         this.addToCart = page.getByRole(selectorCart.addToCart.locator, 
-                                        selectorCart.addToCart.option) 
+                                        selectorCart.addToCart.option),
+        this.deleteProducts = page.getByRole(selectorCart.deleteProduct.locator,
+                                             selectorCart.deleteProduct.option).locator(selectorCart.Locator);
+        this.cartEmpty = page.getByText(selectorCart.cartEmptyText);                         
         this.randomDigit = 1 
     }
 
@@ -95,5 +98,10 @@ exports.Cart = class Cart {
         const quantityReceived = await this.page.locator("tbody tr .cart_quantity .disabled").innerText(); 
     
         expect(parseInt(quantityReceived)).toEqual(parseInt(selectorCart.fillQuantity)); 
+     }
+     async removeProducts() {
+        await this.deleteProducts.click();
+        await expect(this.cartEmpty ).toBeVisible();
+
      }
 }

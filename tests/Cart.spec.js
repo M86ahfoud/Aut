@@ -30,11 +30,16 @@ test.describe("Add Products in Cart", async()=> {
     await CartInstance.verifyProductInCart();
     await CartInstance.verifyPriceQuanTot();   
   });
-
+  
   test("Verify Product quantity  in cart", async()=> {
     await CartInstance.viewProduct(); 
     await CartInstance.verifyProductDétail();
     await CartInstance.IncreaseQuantity();
     await CartInstance.viewCartAndVerify()
+  })
+  test("Remove Products From Cart", async()=> {
+    await CartInstance.addProduct1();
+    await CartInstance.navigateToCartPage();
+    await CartInstance.removeProducts();
   })
 })

@@ -20,5 +20,13 @@
     "cartProductLocator":".cart_product",
     "buttonContinueShooping": "button:has-text('Continue Shopping')",
     "quantity": "#quantity",
-    "fillQuantity": "4"
+    "fillQuantity": "4",
+    "deleteProduct": {
+        "locator": "cell",
+        "option": {
+            "name": "" 
+        }
+    },
+    "Locator": "a",
+    "cartEmptyText": "Cart is empty!"
 }

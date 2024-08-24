@@ -24,6 +24,7 @@ test.describe("viewCategroyProduct", async()=> {
     test("viewCategory", async() => {
         await homePageInstance.goto();
         await homePageInstance.checkHompage();
+        // Verify the Category title is visible 
         await expect(page.locator("h2").getByText("Category")).toBeVisible();
         await categoryInstance.navigateToWomenCategory();
         await expect(page).toHaveURL(/.*category/);

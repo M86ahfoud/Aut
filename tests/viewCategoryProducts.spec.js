@@ -37,7 +37,7 @@ test.describe("viewCategroyProduct", async()=> {
         await expect(page).toHaveURL(/.*category/);
         await expect(page).toHaveTitle(/.*Tshirts/);
     })
-    test.only("View Brand Products", async()=> {
+    test("View Brand Products", async()=> {
         await homePageInstance.goto();
         await homePageInstance.checkHompage();
         await productInstance.navigateToProductPage();

@@ -23,8 +23,7 @@ test.describe('Verify Subscription in home page', async() => {
     await browser.close()
     })
 
-    test( "verfiy", async () =>{
-       
+    test( "verfiy", async () =>{ 
         await homePageInstance.vérifyText()
         await homePageInstance.fillInput()
         await homePageInstance.verifySuccesMessage()

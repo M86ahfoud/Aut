@@ -12,4 +12,8 @@ exports.Category = class Category {
         await this.page.getByRole('link', { name: ' Men' }).click();
         await this.page.getByRole('link', { name: 'Tshirts' }).click();
     }
+    async ClickOnAnyBrandName() {
+        // getByRole('link', { name: '(6) Polo' })
+        await this.page.getByRole('link', { name: '(6) Polo' }).click();
+    }
 }
